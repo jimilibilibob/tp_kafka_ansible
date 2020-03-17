@@ -8,8 +8,6 @@ Type=simple
 Restart=always
 RestartSec=1
 User=root
-StandardOutput=/var/zookeeper/log1.log
-StandardError=/var/zookeeper/log2.log
 ExecStart=/etc/kafka/bin/zookeeper-server-start.sh /etc/kafka/config/zookeeper.properties 
 
 [Install]

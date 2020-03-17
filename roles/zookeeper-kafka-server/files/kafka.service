@@ -8,9 +8,7 @@ Type=simple
 Restart=always
 RestartSec=1
 User=root
-StandardOutput=/var/kafka/log1.log
-StandardError=/var/kafka/log2.log
-ExecStart=/etc/kafka/bin/kafka-server-start.sh /etc/kafka/config/servers.properties 
+ExecStart=/etc/kafka/bin/kafka-server-start.sh /etc/kafka/config/server.properties 
 
 [Install]
 WantedBy=multi-user.target

@@ -4,4 +4,5 @@
   connection: local 
   become: yes
   roles:
-    - kafka
+    - zookeeper-kafka-server
+    - kafka-topic

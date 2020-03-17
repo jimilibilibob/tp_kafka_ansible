@@ -20,7 +20,7 @@
   become: true
 
 - name: Rename Kafka
-  shell: "mv ./kafka_2.11-2.4.1 etc/kafka"
+  shell: "mv ./kafka_2.11-2.4.1 /etc/kafka"
   become: true
 
 - name : Remove kafka.tgz
@@ -28,20 +28,7 @@
     path: "./kafka.tgz"
     state: absent
   become: true
-
-- name: Create zookeeper log directory 
-  file:
-    path: "var/log/zookeeper"
-    state: directory
-    mode: '0755'
-
-
-- name: Create kafka log directory
-  file:
-    path: "var/log/kafka"
-    state: directory
-    mode: '0755'
-                                            
+                                           
 - name: copy kafka service file
   copy:
     src: kafka.service
@@ -60,10 +47,10 @@
 
 - name: enable zookeeper service
   systemd:
-    name: zookeeper
-    enabled: yes
+    state: started
+    name: zookeeper 
 
 - name: enable kafka service
   systemd:
+    state: started
     name: kafka
-    enabled: yes
