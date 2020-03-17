@@ -2,7 +2,8 @@
 - hosts: local
   become_user : root
   connection: local 
-  become: yes
+  become: true
   roles:
-    - zookeeper-kafka-server
-    - kafka-topic
+    #- zookeeper-kafka-server
+    #- kafka-topic
+    - docker
