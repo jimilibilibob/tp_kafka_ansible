@@ -1,8 +1,6 @@
 {
 	"variables":{
 		"subscription_id": "",
-		"owner": "{{env `LOGNAME`}}",
-		"environment": "",
 		"ressource_group_name":"",
 		"gallery_name":""
 	},
