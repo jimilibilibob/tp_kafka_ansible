@@ -1,0 +1,48 @@
+{
+	"variables":{
+		"subscription_id": "",
+		"owner": "{{env `LOGNAME`}}",
+		"environment": "",
+		"ressource_group_name":"",
+		"gallery_name":""
+	},
+	"sensitive-variables": [
+		"subscription_id"
+	],
+	"builders":[
+		{
+			"type": "azure-arm",
+			
+			"subscription_id": "{{ user `subscription_id`}}", 
+			
+			"build_resource_group_name" : "{{ user `ressource_group_name`}}",
+
+			"managed_image_resource_group_name": "{{ user `ressource_group_name`}}",
+			"managed_image_name": "TPStream",
+
+			"shared_image_gallery_destination": {
+				"resource_group": "{{ user `ressource_group_name`}}",
+				"gallery_name": "{{ user `gallery_name`}}",
+				"image_name": "img-tp-stream",
+				"image_version": "1.0.0",
+				"replication_regions" : [ "francecentral" ]
+			},
+			
+			"os_type":"Linux",
+			"image_publisher": "Canonical",
+			"image_offer": "UbuntuServer",
+			"image_sku": "18.04-LTS",
+						
+			"vm_size":"Standard_B2s"
+		}	
+	],
+	"provisioners" : [
+		{
+		"type" : "ansible",
+		"extra_arguments": [
+			        "-e 'ansible_python_interpreter=/usr/bin/python3'"
+				   ],
+		"playbook_file" : "../ansible/playbook.yml"
+		}
+	]
+}
