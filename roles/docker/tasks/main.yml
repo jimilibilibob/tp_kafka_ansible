@@ -26,6 +26,7 @@
 - name: Install docker 
   pip:
     name: docker
+    executable: "/usr/bin/pip3"
 
 - name: Pull pyspark-notebook Docker image
   docker_image:

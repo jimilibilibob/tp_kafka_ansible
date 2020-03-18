@@ -1,7 +1,7 @@
 ---
-- hosts: local
-  become_user : root
-  connection: local 
+- hosts: local 
+  #remote_user : test_ansible
+  connection: local
   become: true
   roles:
     #- zookeeper-kafka-server
