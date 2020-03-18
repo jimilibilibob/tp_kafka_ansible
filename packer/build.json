@@ -21,7 +21,7 @@
 			"shared_image_gallery_destination": {
 				"resource_group": "{{ user `ressource_group_name`}}",
 				"gallery_name": "{{ user `gallery_name`}}",
-				"image_name": "img-tp-stream",
+				"image_name": "imd-tp-stream",
 				"image_version": "1.0.0",
 				"replication_regions" : [ "francecentral" ]
 			},
