@@ -28,7 +28,13 @@
     name: docker
     executable: "/usr/bin/pip3"
 
-- name: Pull pyspark-notebook Docker image
+- name: Pull TP Docker image
   docker_image:
-    name: jupyter/pyspark-notebook
-    source: pull
+          name: jimilibilibob/tp-jupynotebook-git:202003
+   
+- name: Start a container with a command
+  docker_container:
+    name: TP
+    image: jimilibilibob/tp-jupynotebook-git:202003
+    command: start-notebook.sh --NotebookApp.password='sha1:ea68afae75d4:d1316963242d8eda06be2380d7f0d2c205fde124'
+    ports: 8888:8888
