@@ -21,7 +21,8 @@ Coming soon
 ### To Do 
 
 - Ansible : Gestion user, gestion des logs et ajout des tags 
+- Ansible : Créer rôle Jupyter et rôle Git
 - Packer : Définir process (authent azure, déploiement image shared gallery et image definition)
 - Terraform : ... 
 - TP : Code PyKafka 
-- TP suite : Nginx, Node, Mongo et librairies D3JS et Io Socket pour Dashboard stream 
+- TP suite : Docker --> Nginx, Node, Mongo et librairies D3JS et Io Socket pour Dashboard stream 
