@@ -1,9 +1,8 @@
 ---
-- hosts: local 
-  #remote_user : test_ansible
-  connection: local
-  become: true
+- hosts: all 
+  remote_user : packer
+  become: yes
   roles:
-    #- zookeeper-kafka-server
-    #- kafka-topic
+    - zookeeper-kafka-server
+    - kafka-topic
     - docker
