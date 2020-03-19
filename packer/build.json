@@ -23,7 +23,7 @@
 				"gallery_name": "{{ user `gallery_name`}}",
 				"image_name": "imd-tp-stream",
 				"image_version": "1.0.0",
-				"replication_regions" : [ "francecentral" ]
+				"replication_regions" : [ "westeurope" ]
 			},
 			
 			"os_type":"Linux",
