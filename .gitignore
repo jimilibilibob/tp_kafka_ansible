@@ -5,3 +5,6 @@
 # .tfstate files
 *.tfstate
 *.tfstate.*
+
+**/vm-tp-stream/tp/*
+**/vm-tp-stream/dev/*

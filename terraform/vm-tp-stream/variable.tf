@@ -3,6 +3,7 @@ variable "subscription_id" {
 }
 
 variable "location" {
+    default = "westeurope"
     description = "Localisation des ressources"
 }
 
@@ -15,5 +16,9 @@ variable "sig_gallery_name" {
 }
 
 variable "sig_gallery_resource_group" {
-    description = "Rroupe de ressource de la Shared Image Gallery"
+    description = "Groupe de ressource de la Shared Image Gallery"
+}
+
+variable "env" {
+  description = "Variable d'envrionnement"
 }
