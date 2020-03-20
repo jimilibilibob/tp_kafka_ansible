@@ -1,8 +1,13 @@
 ---
-- hosts: all 
-  remote_user : packer
-  become: yes
+- hosts: default
+  become: true
+  user: root
+  vars:
+    pip_install_packages:
+    - name: docker
   roles:
     - zookeeper-kafka-server
     - kafka-topic
+    - geerlingguy.pip
+    - geerlingguy.docker
     - docker
