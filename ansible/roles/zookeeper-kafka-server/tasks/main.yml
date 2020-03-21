@@ -54,3 +54,13 @@
   systemd:
     enabled: yes
     name: kafka
+
+- name: start zookeeper service
+  systemd:
+    state: started
+    name: zookeeper 
+
+- name: start kafka service
+  systemd:
+    state: started
+    name: kafka
