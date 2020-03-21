@@ -22,7 +22,7 @@
 				"resource_group": "{{ user `ressource_group_name`}}",
 				"gallery_name": "{{ user `gallery_name`}}",
 				"image_name": "imd-tp-stream",
-				"image_version": "1.0.0",
+				"image_version": "1.0.1",
 				"replication_regions" : [ "westeurope" ]
 			},
 
