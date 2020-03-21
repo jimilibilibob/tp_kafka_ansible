@@ -5,5 +5,5 @@
     delay: 10
 
 - name: Create first topic 
-  shell: "/etc/kafka/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 2 --topic first_topic"
+  shell: "/etc/kafka/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 2 --topic comand"
   become: true
