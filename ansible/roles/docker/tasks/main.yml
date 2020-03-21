@@ -2,11 +2,18 @@
 - name: Pull TP Docker image
   docker_image:
           name: jimilibilibob/tp-jupynotebook-git:202003
-   
-- name: Start a container with a command
+
+- name: Create the container 
   docker_container:
     name: TP
     image: jimilibilibob/tp-jupynotebook-git:202003
-    command: start-notebook.sh --NotebookApp.password='sha1:ea68afae75d4:d1316963242d8eda06be2380d7f0d2c205fde124'
+    command: start-notebook.sh --NotebookApp.password='sha1:f4104699bf87:cbd18eeaeacb1e64772c8b272305fa0100463561'
     ports: 8888:8888
     network_mode: host
+
+- name: Start docker container
+  cron:
+    name: "Start docker container"
+    special_time: reboot
+    job: "docker start TP"
+    user: root

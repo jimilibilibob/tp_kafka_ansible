@@ -19,7 +19,7 @@
   shell:  "tar -xzvf ./kafka.tgz"
   become: true
 
-- name: Rename Kafka
+- name: Move Kafka
   shell: "mv ./kafka_2.11-2.4.1 /etc/kafka"
   become: true
 
@@ -28,7 +28,7 @@
     path: "./kafka.tgz"
     state: absent
   become: true
-                                           
+
 - name: copy kafka service file
   copy:
     src: kafka.service
@@ -36,7 +36,7 @@
     owner: root
     mode: '0640'
   become: true
-                                               
+
 - name: copy zookeeper service file
   copy:
     src: zookeeper.service

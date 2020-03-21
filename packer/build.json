@@ -25,12 +25,12 @@
 				"image_version": "1.0.0",
 				"replication_regions" : [ "westeurope" ]
 			},
-			
+
 			"os_type":"Linux",
 			"image_publisher": "Canonical",
 			"image_offer": "UbuntuServer",
 			"image_sku": "18.04-LTS",
-						
+
 			"vm_size":"Standard_B2s"
 		}	
 	],

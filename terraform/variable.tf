@@ -20,5 +20,5 @@ variable "sig_gallery_resource_group" {
 }
 
 variable "env" {
-  description = "Variable d'envrionnement"
+    description = "Variable d'envrionnement"
 }

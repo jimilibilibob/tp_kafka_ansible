@@ -77,7 +77,7 @@ resource "azurerm_virtual_machine" "sub" {
     delete_os_disk_on_termination = true
 
     storage_image_reference {
-        id = data.azurerm_shared_image_version.image_pki.managed_image_id
+        id = data.azurerm_shared_image_version.image_tp.managed_image_id
     }
 
     storage_os_disk {
@@ -91,6 +91,7 @@ resource "azurerm_virtual_machine" "sub" {
         computer_name  = "hostname"
         admin_username = "usertp202003"
         admin_password = random_password.vm_admin_password[count.index].result
+        custom_data    = templatefile("./cloud-init/init-vm.tpl", {})
     }
 
     os_profile_linux_config {
