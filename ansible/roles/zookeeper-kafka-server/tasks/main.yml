@@ -47,10 +47,10 @@
 
 - name: enable zookeeper service
   systemd:
-    state: started
+    enabled: yes
     name: zookeeper 
 
 - name: enable kafka service
   systemd:
-    state: started
+    enabled: yes
     name: kafka
