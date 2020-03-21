@@ -56,15 +56,3 @@
     enabled: yes
     name: kafka
   become: true
-
-- name: start zookeeper service
-  systemd:
-    state: started
-    name: zookeeper 
-  become: true
-
-- name: start kafka service
-  systemd:
-    state: started
-    name: kafka
-  become: true
