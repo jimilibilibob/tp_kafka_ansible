@@ -1,7 +1,7 @@
 [Unit]
 Description=Kafka broker service
 StartLimitIntervalSec=0
-After=zookeeper.target
+After=zookeeper.service
 
 [Service]
 Type=simple
