@@ -91,7 +91,6 @@ resource "azurerm_virtual_machine" "sub" {
         computer_name  = "hostname"
         admin_username = "usertp202003"
         admin_password = random_password.vm_admin_password[count.index].result
-        custom_data    = templatefile("./cloud-init/init-vm.tpl", {})
     }
 
     os_profile_linux_config {
