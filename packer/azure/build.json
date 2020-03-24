@@ -38,7 +38,7 @@
 		{
 		"type" : "ansible",
 		"extra_arguments": [],
-		"playbook_file" : "../ansible/playbook.yml"
+		"playbook_file" : "../../ansible/playbook.yml"
 		}
 	]
 }

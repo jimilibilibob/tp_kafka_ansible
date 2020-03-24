@@ -6,5 +6,5 @@
 *.tfstate
 *.tfstate.*
 
-**/terraform/tp/*
-**/terraform/dev/*
+# var packer
+**/packer/*/*.var
