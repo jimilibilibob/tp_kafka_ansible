@@ -18,10 +18,15 @@
         "most_recent": true
       },
       "instance_type": "t2.micro",
-      "ssh_username": "packer",
+      "ssh_username": "ubuntu",
       "ami_name": "packer-build-tp"
     }],
 	"provisioners" : [
+    {
+      "type" : "ansible",
+      "extra_arguments": [],
+      "playbook_file" : "../../ansible/playbook-aws.yml"
+    },
 		{
 		"type" : "ansible",
 		"extra_arguments": [],

@@ -1,0 +1,8 @@
+---
+- name: get ip
+  shell: "ip=$(/sbin/ifconfig eth0 | grep 'inet addr:' | cut -d: -f2 | awk '{ print $1}')"
+  become: true
+
+- name: change hosts
+  shell: "sed '/^127.0.0.1 localhost*/a 127.0.1.1 '$ip /etc/hosts"
+  become: true
