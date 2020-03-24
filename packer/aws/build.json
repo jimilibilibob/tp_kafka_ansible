@@ -22,11 +22,6 @@
       "ami_name": "packer-build-tp"
     }],
 	"provisioners" : [
-    {
-      "type" : "ansible",
-      "extra_arguments": [],
-      "playbook_file" : "../../ansible/playbook-aws.yml"
-    },
 		{
 		"type" : "ansible",
 		"extra_arguments": [],

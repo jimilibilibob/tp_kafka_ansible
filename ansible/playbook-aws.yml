@@ -1,6 +1,0 @@
----
-- hosts: default
-  become: true
-  user: root
-  roles:
-    - aws
