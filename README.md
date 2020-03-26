@@ -11,10 +11,11 @@ Ce repository à pour but de créer l'image d'un environnement de travail dans l
 ## Packer
 
 Création d'une image et déploiement de celle-ci sur une Shared Gallery Azure 
+az sig image-definition create --resource-group support-rg --gallery-name sharedgallery --gallery-image-definition TPStream --publisher Canonical --offer UbuntuServer --sku 18.04-LTS --os-type linux
 
 ## Terraform 
 
-Coming soon 
+Doc coming soon 
       
 
 
@@ -26,3 +27,6 @@ Coming soon
 - Terraform : ... 
 - TP : Code PyKafka 
 - TP suite : Docker --> Nginx, Node, Mongo et librairies D3JS et Io Socket pour Dashboard stream 
+- Faire doc Terraform
+- Faire fonctionner Packer AWS
+- Faire Terraform AWS
